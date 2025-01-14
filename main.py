@@ -19,12 +19,23 @@ def count_chars(text_in):
             char_counts[char] = 1
     return char_counts
 
+def summarize_book_values(word_count, char_count):
+    print(f"--- Begin report on  {doc_path} ---")
+    print(f"{word_count} words found in this document")
+    
+    for char in char_count:
+        print(f"The {char} character was found {char_count[char]} times")
+
+    print("--- End Report ---")
 
 
+doc_path = "books/frankenstein.txt"
 
-book_text = main("books/frankenstein.txt")
+book_text = main(doc_path)
 
 word_count = count_words(book_text)
 
 char_dictionary = count_chars(book_text)
+
+summarize_book_values(word_count,char_dictionary)
 

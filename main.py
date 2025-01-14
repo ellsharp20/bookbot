@@ -3,10 +3,10 @@ def main(path_to_file):
         file_contents = f.read()
         return file_contents
 
-def word_count(text_in):
+def count_words(text_in):
     return len(text_in.split())
 
-def char_count(text_in):
+def count_chars(text_in):
     char_counts = {}
     lowered_text = text_in.lower()
     word_list = lowered_text.split()
@@ -24,8 +24,7 @@ def char_count(text_in):
 
 book_text = main("books/frankenstein.txt")
 
-print (word_count(book_text))
+word_count = count_words(book_text)
 
-print(char_count(book_text))
-
+char_dictionary = count_chars(book_text)
 
